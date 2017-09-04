@@ -1,5 +1,5 @@
-#ifndef TCPPROTOCOL_H
-#define TCPPROTOCOL_H
+#ifndef TCPSTORE_H
+#define TCPSTORE_H
 
 #include <iostream>
 #include <pcap/pcap.h>
@@ -13,18 +13,13 @@
 
 using namespace std;
 
-class TcpProtocol
+class TcpStore
 {
-	
-	public: 
-		TcpProtocol(const u_char *data);
-		TcpProtocol& operator=(const u_char protocol);
+	public:
+		TcpStore::
 
 	private:
-		u_char protocol;
-		const int eth_header_length = 14;
-		const int proto_bytes = 9;
-		int j;	
+
 };
 
 #endif

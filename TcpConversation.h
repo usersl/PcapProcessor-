@@ -1,5 +1,5 @@
-#ifndef TCPPROTOCOL_H
-#define TCPPROTOCOL_H
+#ifndef TCPCONVERSATION_H
+#define TCPCONVERSATION_H
 
 #include <iostream>
 #include <pcap/pcap.h>
@@ -13,18 +13,17 @@
 
 using namespace std;
 
-class TcpProtocol
+class TcpConversation
 {
-	
-	public: 
-		TcpProtocol(const u_char *data);
-		TcpProtocol& operator=(const u_char protocol);
+	public:
+		TcpConversation::TcpConversation(const u_char *date);
 
 	private:
-		u_char protocol;
-		const int eth_header_length = 14;
-		const int proto_bytes = 9;
-		int j;	
+		int portA;
+		int portB;
+		string ipA;
+		string ipB;
+
 };
 
 #endif
